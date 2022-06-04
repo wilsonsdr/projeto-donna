@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "6182c7df-2bca-41ce-9a1b-a9eaa2edd956", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "a3380792-edb3-4e49-af8d-cf61531466d4", // The ID of your service instance.
+            onLoad: function (instance) {
+                instance.render();
+            }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+            document.head.appendChild(t);
+        });
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizzaria d' Donna</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <section id="banner">
+        <div class="bg-color">
+            <header id="header">
+                <div class="container">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#about">Sobre</a>
+                        <a href="#promotion">Promoção</a>
+                        <a href="#menu-list">Menu</a>
+                    </div>
+                    <span onclick="openNav()" class="pull-right menu-icon">☰</span>
+                </div>
+            </header>
+            <div class="container">
+                <div class="row">
+                    <div class="inner text-center">
+                        <h1 class="logo-name">Pizzaria d' Donna</h1>
+                        <h2>Todo o sabor na sua casa.</h2>
+                        <p>Para realizar um pedido basta usar o nosso chatbot!!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center marb-35">
+                    <h1 class="header-h">Unidos por um só motivo</h1>
+                    <p class="header-p">Somos a primeira pizzaria a focar nesse tipo de serviço.
+                        <br>Contribuindo com uma melhor experiência, segurança, conforto e qualidade.
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="sobre-info">
+                            <h2 class="heading">Não tenha medo de pedir, a fome não espera</h2>
+                            <div class="details-list">
+                                <ul>
+                                    <li><i class="fa fa-check"></i>Ingredientes de primeira</li>
+                                    <li><i class="fa fa-check"></i>Receitas inspiradas</li>
+                                    <li><i class="fa fa-check"></i>Amor em cada detalhe </li>
+                                    <li><i class="fa fa-check"></i>Nosso compromisso é estar sempre presente e atendendo às suas necessidades</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <img src="img/pizza.jpg" alt="" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+    <section id="promotion">
+        <div class="bg-color" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center" style="padding:60px;">
+                        <h1 class="header-h">Promoção da semana</h1>
+                    </div>
+                        <div class="item active left">
+                            <div class="col-md-6 col-sm-6 left-images">
+                                <img src="img/pizza03.jpg" class="img-responsive">
+                            </div>
+                            <div class="details-text">
+                                <div class="content-holder">
+                                    <h2>Pizza Calabresa</h2>
+                                    <p>É especialmente preparada com recheio generoso de linguiça calabresa de primeira qualidade, queijo muçarela e orégano. A massa deliciosa e macia e a borda crocante complementam a nossa versão da pizza de Calabresa.
+                                        Não leva cebolas, mas pode ser acebolada, caso seja a preferência do cliente.</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menu-list" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center marb-35">
+                    <h1 class="header-h">Cardápio</h1>
+                    <p class="header-p">Grande variedade de produtos e ingredientes
+                        <br>Não deixe para amanhã o que você pode comer hoje.
+                    </p>
+                </div>
+
+                <div class="col-md-12  text-center" id="menu-flters">
+                    <ul>
+                        <li><a class="filter active" data-filter=".menu-restaurant">Tradicionais</a></li>
+                        <li><a class="filter" data-filter=".special">Especiais</a></li>
+                        <li><a class="filter" data-filter=".fit">Fit</a></li>
+                        <li><a class="filter" data-filter=".sweet">Doces</a></li>
+                    </ul>
+                </div>
+
+                <div id="menu-wrapper">
+
+                    <div class="special menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Champignon</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$51.00</span>
+                        </span>
+                        <span class="menu-subtitle">Champignon fatiado, cebola, catupiry e azeitona preta </span>
+                    </div>
+
+                    <div class="special menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Mafiosa</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$51.00</span>
+                        </span>
+                        <span class="menu-subtitle">Molho Branco, abobrinha, gorgonzola, parmesão e azeitona preta</span>
+                    </div>
+
+                    <div class="special menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Pepperoni</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$51.00</span>
+                        </span>
+                        <span class="menu-subtitle">Pepperoni, mussarela e azeitona preta</span>
+                    </div>
+
+                    <div class="special menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Romana</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$51.00</span>
+                        </span>
+                        <span class="menu-subtitle">Mussarela, rodelas de tomate, aliche importado, parmesão e azeitona preta</span>
+                    </div>
+
+                    <div class="fit menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Fit</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$49.00</span>
+                        </span>
+                        <span class="menu-subtitle">Frango desfiado, ovos, brócolos, cebola roxa, palmido e azeitona preta</span>
+                    </div>
+
+                    <div class="fit menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Fit Gourmet</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$49.00</span>
+                        </span>
+                        <span class="menu-subtitle">Frango desfiado, pimentão vermelho, tomate seco, rúcula e azeitona preta</span>
+                    </div>
+
+                    <div class="fit menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Proteica</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$49.00</span>
+                        </span>
+                        <span class="menu-subtitle">Frango desfiado, atum, ovos, presunto parma, mussarela de búfala, tomate cereja e azeitona preta</span>
+                    </div>
+
+                    <div class="fit menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Light</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$49.00</span>
+                        </span>
+                        <span class="menu-subtitle">Atum, abobrinha, alho poró, tomate cereja e azeitona preta</span>
+                    </div>
+
+                    <div class="fit menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Vegetariana</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$49.00</span>
+                        </span>
+                        <span class="menu-subtitle">Berinjela, ervilhas frescas, champignon, rodelas de palmito, mussarela de búfala e azeitona preta</span>
+                    </div>
+
+                    <div class="sweet menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Banana com chocolate</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$42.00</span>
+                        </span>
+                        <span class="menu-subtitle">Chocolate com fatias de banana</span>
+                    </div>
+
+                    <div class="sweet menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Romeu e Julieta</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$42.00</span>
+                        </span>
+                        <span class="menu-subtitle">Goiabada e catupiry</span>
+                    </div>
+
+                    <div class="sweet menu-restaurant">
+                        <span class="clearfix">
+                            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Prestígio</a>
+                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                            <span class="menu-price">R$42.00</span>
+                        </span>
+                        <span class="menu-subtitle">Beijinho com chocolate</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer text-center">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 text-center">
+                    <div class="widget">
+                        <h4 class="widget-title">Pizzaria d' Donna</h4>
+                        <p class="copyright clear-float">
+                            Esse site é um canal de denúncia contra violência doméstica e todas as informações são confidenciais e repassadas à polícia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
